@@ -8,7 +8,9 @@
         <div v-for="movie in movies" :key="movie.id" class="col-3 p-1 m-2 border border-danger border-2 rounded-3">
           <p>Titolo: {{ movie.title }} </p>
           <p>Titolo Originale: {{ movie.original_title }} </p>
-          <p>Lingua Originale: {{ movie.original_language }} </p>
+          <p>Lingua Originale: 
+            <span class="fi fi-" :class="movie.original_language"></span> 
+          </p>
           <p>Rating: {{ movie.vote_average }} </p>
       </div>
       </div>
@@ -54,5 +56,8 @@ export default {
 
 <style lang="scss">
 @import "~bootstrap/scss/bootstrap";
+@import "/node_modules/flag-icons/css/flag-icons.min.css";
+
+
 
 </style>
