@@ -1,11 +1,11 @@
 <template>
   <div id="app">
     <div>
-      <input type="text" v-model="query"> <button @click="search">Cerca</button>
+      <input type="text" v-model="query" @keyup="search" placeholder="Cerca...">
     </div>
     <main class="container-xl">
       <moviesComponent :movies="movies" />
-      <seriesComponent :series="series"/>
+      <seriesComponent :series="series" />
     </main>
   </div>
 </template>
