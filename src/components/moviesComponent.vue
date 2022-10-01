@@ -6,7 +6,7 @@
           <p>Titolo: {{ movie.title }} </p>
           <p>Titolo Originale: {{ movie.original_title }} </p>
           <flagComponent :languages="movie.original_language" />
-          <p>Rating: {{ movie.vote_average }} </p>
+          <ratingComponent :rating="movie.vote_average" />
         </div>
     </div>
 </template>
@@ -14,6 +14,7 @@
 <script>
 import flagComponent from "@/components/flagComponent.vue"
 import posterComponent from "@/components/posterComponent.vue"
+import ratingComponent from "@/components/ratingComponent.vue"
 
 export default {
     name: "moviesComponent",
@@ -22,7 +23,8 @@ export default {
     },
     components: {
       flagComponent,
-      posterComponent
+      posterComponent,
+      ratingComponent
     }
 }
 </script>
