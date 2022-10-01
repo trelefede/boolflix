@@ -1,7 +1,7 @@
 <template>
     <div class="row">
         <h2>FILM</h2>
-        <div v-for="movie in movies" :key="movie.id" class="col-3 p-1 m-2 border border-danger border-2 rounded-3">
+        <div v-for="movie in movies" :key="movie.id" class="col-3 p-1 g-3 border border-danger border-2 rounded-3">
           <posterComponent :posterApiLink="movie.poster_path" :alt="movie.original_title" />
           <p>Titolo: {{ movie.title }} </p>
           <p>Titolo Originale: {{ movie.original_title }} </p>
