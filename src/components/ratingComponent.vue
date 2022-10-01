@@ -1,6 +1,8 @@
 <template>
     <p>
-        Voto: {{ rating }}
+        Voto: {{ rating }} 
+        <font-awesome-icon icon="fa-solid fa-star" />
+        <font-awesome-icon icon="fa-regular fa-star" />
     </p>
 </template>
 
@@ -8,7 +10,7 @@
 export default {
     name: "ratingComponent",
     props: {
-        rating: String
+        rating: String 
     }
 }
 </script>
