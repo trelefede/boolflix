@@ -1,12 +1,16 @@
 <template>
     <div class="row">
-        <h2>SERIES</h2>
-        <div v-for="serie in series" :key="serie.id" class="col-3 p-1 g-3 border border-danger border-2 rounded-3">
-          <posterComponent :posterApiLink="serie.poster_path" :alt="serie.original_title" />
-          <p>Titolo: {{ serie.name }} </p>
-          <p>Titolo Originale: {{ serie.original_name }} </p>
-          <flagComponent :languages="serie.original_language" />
-          <ratingComponent :rating="serie.vote_average" />
+        <h2 class="text-center dark fs-1 mt-4">SERIES</h2>
+        <div v-for="serie in series" :key="serie.id" class="col-3 p-1 g-3">
+          <div class="card bg-dark text-white">
+            <posterComponent :posterApiLink="serie.poster_path" :alt="serie.original_title" class="card-img" />
+            <div class="movie card-img-overlay d-none">
+              <p>Titolo: {{ serie.name }} </p>
+              <p>Titolo Originale: {{ serie.original_name }} </p>
+              <flagComponent :languages="serie.original_language" />
+              <ratingComponent :rating="serie.vote_average" />
+            </div>
+          </div>
         </div>
     </div>
 </template>

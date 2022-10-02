@@ -74,5 +74,9 @@ export default {
 @import "~bootstrap/scss/bootstrap";
 @import "/node_modules/flag-icons/css/flag-icons.min.css";
 
+#app{
+  background-color: #5f9ea0;
+}
+
 
 </style>
