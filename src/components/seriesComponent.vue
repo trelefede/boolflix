@@ -1,9 +1,9 @@
 <template>
-    <div class="row">
-        <h2 class="text-center dark fs-1 mt-4">SERIES</h2>
-        <div v-for="serie in series" :key="serie.id" class="col-3 p-1 g-3">
-          <div class="card bg-dark text-white">
-            <posterComponent :posterApiLink="serie.poster_path" :alt="serie.original_title" class="card-img" />
+    <div class="row m-4">
+        <h2 class="dark fs-1 my-4">SERIES</h2>
+        <div v-for="serie in series" :key="serie.id" class="ft-card col-2 p-1 g-3 my-2">
+          <div class="ft-height card bg-dark text-white">
+            <posterComponent :posterApiLink="serie.poster_path" :alt="serie.original_title" class="card-img flex-grow-1 " />
             <div class="movie card-img-overlay d-none">
               <p>Titolo: {{ serie.name }} </p>
               <p>Titolo Originale: {{ serie.original_name }} </p>
@@ -34,5 +34,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
+.ft-height{
+  height: 100%;
+}
 </style>

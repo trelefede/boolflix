@@ -1,9 +1,9 @@
 <template>
-    <div class="row">
-        <h2 class="text-center dark fs-1 mt-4">FILM</h2>
-        <div v-for="movie in movies" :key="movie.id" class="col-3 p-1 g-3">
-          <div class="card bg-dark text-white">
-            <posterComponent :posterApiLink="movie.poster_path" :alt="movie.original_title" class="card-img" />
+    <div class="row m-4">
+        <h2 class="dark fs-1 my-4">FILM</h2>
+        <div v-for="movie in movies" :key="movie.id" class="col-2 p-1 my-1">
+          <div class="ft-height card bg-dark text-white">
+            <posterComponent :posterApiLink="movie.poster_path" :alt="movie.original_title" class="card-img flex-grow-1 " />
             <div class="movie card-img-overlay d-none">
               <p>Titolo: {{ movie.title }} </p>
               <p>Titolo Originale: {{ movie.original_title }} </p>
@@ -35,5 +35,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
+.ft-height{
+  height: 100%;
+}
 </style>
