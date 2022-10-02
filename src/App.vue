@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <headerComponent @search="search" />
-    <main class="container-xl">
+    <main class="fluid">
       <moviesComponent :movies="movies" />
       <seriesComponent :series="series" />
     </main>
