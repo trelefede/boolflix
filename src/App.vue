@@ -1,8 +1,6 @@
 <template>
   <div id="app">
-    <div>
-      <input type="text" v-model="query" @keyup="search" placeholder="Cerca...">
-    </div>
+    <headerComponent @search="search" />
     <main class="container-xl">
       <moviesComponent :movies="movies" />
       <seriesComponent :series="series" />
@@ -16,6 +14,7 @@ import { apiKey } from "@/env.js";
 
 import moviesComponent from "@/components/moviesComponent.vue"
 import seriesComponent from "@/components/seriesComponent.vue"
+import headerComponent from "@/components/headerComponent.vue"
 
 export default {
   name: 'App',
@@ -28,7 +27,8 @@ export default {
     }
   },
   methods: {
-    search(){
+    search(query){
+      this.query = query;
       this.queryApi(this.query);
     },
     queryApi(textToSearch){ 
@@ -64,7 +64,8 @@ export default {
   },
   components: {
     moviesComponent,
-    seriesComponent
+    seriesComponent,
+    headerComponent
   }
 }
 </script>
