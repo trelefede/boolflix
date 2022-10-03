@@ -1,6 +1,6 @@
 <template>
     <p>
-       Lingua: <span class="fi" :class="ln"></span>
+        <span>Lingua:</span> <span class="fi" :class="ln"></span>
     </p>
 </template>
 
@@ -48,6 +48,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
+span{
+  font-weight: bold;
+  color: white;
+}
 
 </style>

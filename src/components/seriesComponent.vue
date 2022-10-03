@@ -5,11 +5,11 @@
           <div class="ft-height card bg-dark text-white">
             <posterComponent :posterApiLink="serie.poster_path" :alt="serie.original_title" class="card-img flex-grow-1 " />
             <div class="serie card-img-overlay">
-              <p>Titolo: {{ serie.name }} </p>
-              <p>Titolo Originale: {{ serie.original_name }} </p>
+              <p><span>Titolo:</span> {{ serie.name }} </p>
+              <p><span>Titolo originale:</span> {{ serie.original_name }} </p>
               <flagComponent :languages="serie.original_language" />
               <ratingComponent :rating="serie.vote_average" />
-              <p>Overview: {{ serie.overview }} </p>
+              <p class="fs-6"><span>Overview:</span> {{ serie.overview }} </p>
             </div>
           </div>
         </div>
@@ -44,8 +44,16 @@ export default {
 }
 
 .card:hover .serie{
-  background-color: rgba(0, 0, 0, 0.441);
+  background-color: rgba(0, 0, 0, 0.802);
   display: inline-block;
   overflow-y: auto;
+}
+
+p{
+  color: #cecece;
+  & span{
+    color: white;
+    font-weight: bold;
+  }
 }
 </style>

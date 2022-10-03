@@ -1,6 +1,6 @@
 <template>
     <p>
-        Voto: 
+        <span>Voto:</span> 
         <font-awesome-icon icon="fa-solid fa-star" v-for="fullStar in this.fullStars" :key="fullStar" class="star" />
         <font-awesome-icon icon="fa-regular fa-star" v-for="emptyStar in this.emptyStars" :key="emptyStar" />
     </p>
@@ -42,6 +42,11 @@ export default {
 <style lang="scss" scoped>
 .star{
     color: #fb0;
+}
+
+span{
+  font-weight: bold;
+  color: white;
 }
 
 </style>

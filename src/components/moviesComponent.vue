@@ -5,11 +5,11 @@
           <div class="ft-height card bg-dark text-white">
             <posterComponent :posterApiLink="movie.poster_path" :alt="movie.original_title" class="card-img flex-grow-1 " />
             <div class="movie card-img-overlay">
-              <p>Titolo: {{ movie.title }} </p>
-              <p>Titolo Originale: {{ movie.original_title }} </p>
+              <p><span>Titolo:</span> {{ movie.title }} </p>
+              <p><span>Titolo originale:</span>: {{ movie.original_title }} </p>
               <flagComponent :languages="movie.original_language" />
               <ratingComponent :rating="movie.vote_average" />
-              <p>Overview: {{ movie.overview }} </p>
+              <p class="fs-6"><span>Overview:</span> {{ movie.overview }} </p>
             </div>
           </div>
           
@@ -48,5 +48,13 @@ export default {
   background-color: rgba(0, 0, 0, 0.802);
   display: inline-block;
   overflow-y: auto;
+}
+
+p{
+  color: #cecece;
+  & span{
+    color: white;
+    font-weight: bold;
+  }
 }
 </style>
