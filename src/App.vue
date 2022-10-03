@@ -78,4 +78,11 @@ export default {
   background-color: #5f9ea0;
 }
 
+main{
+  margin-top: 70px;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+
 </style>
