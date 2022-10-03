@@ -1,5 +1,5 @@
 <template>
-    <header class="d-flex justify-content-between align-items-center px-4 bg-dark">
+    <header class="d-flex justify-content-between align-items-center position-fixed top-0 px-4 bg-dark">
         <div class="logo">
             <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" alt="logo">
         </div>
@@ -32,7 +32,10 @@ export default {
 <style lang="scss" scoped>
 header{
     height: 70px;
+    z-index: 9999;
+    width: 100%;
 }
+
 img{
     width: 15%;
 }
