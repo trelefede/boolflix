@@ -6,7 +6,7 @@
             <posterComponent :posterApiLink="serie.poster_path" :alt="serie.original_title" class="card-img flex-grow-1 " />
             <div class="serie card-img-overlay">
               <p><span>Titolo:</span> {{ serie.name }} </p>
-              <p><span>Titolo originale:</span> {{ serie.original_name }} </p>
+              <p :class=" serie.original_name === serie.name ? 'd-none' : '' "><span>Titolo originale:</span> {{ serie.original_name }} </p>
               <flagComponent :languages="serie.original_language" />
               <ratingComponent :rating="serie.vote_average" />
               <p class="fs-6"><span>Overview:</span> {{ serie.overview }} </p>

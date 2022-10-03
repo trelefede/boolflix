@@ -6,7 +6,7 @@
             <posterComponent :posterApiLink="movie.poster_path" :alt="movie.original_title" class="card-img flex-grow-1 " />
             <div class="movie card-img-overlay">
               <p><span>Titolo:</span> {{ movie.title }} </p>
-              <p><span>Titolo originale:</span>: {{ movie.original_title }} </p>
+              <p :class=" movie.original_title === movie.title ? 'd-none' : '' "><span>Titolo originale:</span> {{ movie.original_title }} </p>
               <flagComponent :languages="movie.original_language" />
               <ratingComponent :rating="movie.vote_average" />
               <p class="fs-6"><span>Overview:</span> {{ movie.overview }} </p>
